@@ -1,6 +1,10 @@
-from app import create_app
+
+from ticket import create_app
+import os
 app=create_app()
 
-if __name__=="__main__":
-    
+print(os.environ['FLASK_ENV'])
+
+if __name__=='__main':
+  
     app.run(debug=True,port=3000)
